@@ -13,7 +13,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = Employee::all();
+        $employees = Employee::latest()->simplepaginate(5);
         $totalEmployees = Employee::all();
 
         // dd($employees);

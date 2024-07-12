@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ClinicRecord;
 use App\Http\Requests\StoreClinicRecordRequest;
 use App\Http\Requests\UpdateClinicRecordRequest;
+use App\Models\ClinicRecord;
+use App\Models\Employee;
+use App\Models\Finding;
 
 class ClinicRecordController extends Controller
 {
@@ -13,7 +15,19 @@ class ClinicRecordController extends Controller
      */
     public function index()
     {
-        //
+        $employees = Employee::latest()->with('clinicRecords')->simplePaginate(20);
+        $clinicRecords = ClinicRecord::all();
+        $findings = Finding::all();
+        $total = 0;
+        // dd($employees);
+
+        return view('clinic.index', [
+            'employees' => $employees,
+            'clinicRecords' => $clinicRecords,
+            'findings' => $findings,
+            'total' => $total,
+        ]);
+
     }
 
     /**

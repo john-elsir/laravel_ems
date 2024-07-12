@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClinicRecordController;
 use App\Http\Controllers\EmployeeController;
 use App\Models\ClinicRecord;
 use App\Models\Employee;
@@ -16,6 +17,7 @@ Route::get('/', function () {
 });
 
 Route::get('/employees', [EmployeeController::class, 'index']);
+Route::get('/clinic', [ClinicRecordController::class, 'index']);
 
 Route::get('/tables', function () {
     return view('tables');
