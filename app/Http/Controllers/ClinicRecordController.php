@@ -35,7 +35,7 @@ class ClinicRecordController extends Controller
      */
     public function create()
     {
-        //
+        return view('clinic.create');
     }
 
     /**

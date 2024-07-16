@@ -44,7 +44,7 @@
         <h4 class="text-gray-600">Forms</h4>
 
         <div class="mt-4">
-            <div class="p-6 bg-white rounded-md shadow-md">
+            <div class="px-5 py-6 bg-gray-200 text-gray-700 border-b>
                 <h2 class="text-lg text-gray-700 font-semibold capitalize">Account settings</h2>
                 
                 <form>

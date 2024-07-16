@@ -17,7 +17,9 @@ Route::get('/', function () {
 });
 
 Route::get('/employees', [EmployeeController::class, 'index']);
+
 Route::get('/clinic', [ClinicRecordController::class, 'index']);
+Route::get('/clinic/create', [ClinicRecordController::class, 'create']);
 
 Route::get('/tables', function () {
     return view('tables');

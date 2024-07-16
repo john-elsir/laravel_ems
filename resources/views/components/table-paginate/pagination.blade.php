@@ -6,4 +6,8 @@
     </div>
 
     <x-table-paginate.paginate-search/>
+
+    <div>
+        <a href="/clinic/create">Add Record</a>
+    </div>
 </div>
